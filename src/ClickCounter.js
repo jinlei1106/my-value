@@ -9,6 +9,10 @@ class ClickCounter extends Component {
         this.state = {count: props.count};
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({count: nextProps.count})
+    }
+
     onClickAdd() {
         this.setState({count: this.state.count + 1});
     }
